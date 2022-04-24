@@ -1,0 +1,49 @@
+This file contains a few remarks specific to the program for Lab4b.
+
+Programming language and version: C++ 11
+
+Tested with following machines&compilers:
+- on Windows: g++ 7.3.0
+- on Linux Ubuntu: g++ 7.3.0
+
+Libraries used: 
+- standard library
+- pugixml (https://pugixml.org/) for loading the scene files
+- OBJLoader for loading meshes from obj files
+- cmath --> only for using the Pi constant (M_PI) and the square root function (sqrt())
+
+For modularity, the program is composed of the following files according to functionality:
+	- main.cpp (main file, entry point)
+	- vec3.h
+	- xml_reader.h
+	- obj_reader.h
+	- camera.h
+	- light.h
+	- ray.h
+	- surface.h
+	- sphere.h
+	- triangle.h
+	
+	# output
+		--> this folder will contain the generated image file(s) 
+			(after successful compilation and running of the application; initially, this folder is empty.)
+			--> see "How to compile and run" below
+	# OBJ-loader
+		--> this folder contains OBJLoader library files
+	# pugi_xml
+		--> this folder contains pugixml library files
+	# scenes
+		--> this folder contains XML scene files
+
+	* Makefile
+		--> this file compiles the relevant resources and generates a "lab4b" executable 
+
+(!) Please note that only the first 4 required tasks are implemented.
+	texture mapping is not implemented! --> example4.xml open_room is initialized with solid color
+
+How to compile and run: 
+1. open a terminal in the project folder (i.e. where the Makefile is)
+2. run the "make" command
+3. run "./lab4b <XML_FILE_PATH>" to start the program with the desired xml file
+	(e.g. "./lab4b scenes/example3.xml")
+4. open the "output" folder to see the generated image file(s)
